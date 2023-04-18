@@ -4,7 +4,7 @@
     "canvasBackgroundColor": "white",
     "canvasSquare": 500,
     "cellSize": 50,
-    "gameSpeed": 5,
+    "gameSpeed": 300,
   
     "commentML": "These settings correlate to Reinforcement Learning",
     "learningRate": 0.1,
@@ -14,6 +14,6 @@
     "rewardTowardsFood": 5,
   
     "commentMisc": "These are miscelaneous game settings",
-    "SnakeInitLength": 2
+    "SnakeInitLength": 4
   }
   
