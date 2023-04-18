@@ -1,13 +1,52 @@
 @import 'Global';
 
-.login {
-    outline: 1px solid red;
-    .loginForm {
-        background-color: $bright-green;
-    }
-    .signupForm {
-        background-color: $bright-green;
-    }
-
+body {
+  background-color: $background-color;
 }
 
+h1 {
+  color: $text-dark;
+  font-size: $font-size-large;
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: $font-size-medium;
+}
+
+form {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  background-color: $medium-green;
+  color: $text-dark;
+  font-size: $font-size-medium;
+  border: 1px solid $medium-green;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: $bright-green;
+  border: 1px solid $dark-green;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container {
+  width: 45%;
+}

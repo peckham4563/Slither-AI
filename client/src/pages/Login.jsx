@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import Auth from '../utils/auth';
+import "../sass/Login.scss";
 import { LOGIN_MUTATION, ADD_USER_MUTATION } from "../utils/mutations";
 
 export default function Login() {
@@ -29,7 +30,6 @@ export default function Login() {
         } catch (e) {
           console.error(e);
         }
-        // clear form values
         setLoginFormData({
           email: '',
           password: '',
@@ -61,14 +61,17 @@ export default function Login() {
     return (
         <>
             <div className="login">
-                <h1>Login</h1>
-                <form className="loginForm" onSubmit={handleFormSubmit}>
-                    <label>email</label><input name="email" value={loginFormData.name} type="text" onChange={handleChange}></input>
-                    <label>Password</label><input  name="password" type="text" value={loginFormData.password} onChange={handleChange}></input><br />
-                    
+              <div className="container">
+                <div className="form-container">
+                  <h1>Login</h1>
+                    <form className="loginForm" onSubmit={handleFormSubmit}>
+                      <label>email</label><input name="email" value={loginFormData.name} type="text" onChange={handleChange}></input>
+                      <label>Password</label><input  name="password" type="text" value={loginFormData.password} onChange={handleChange}></input><br />
                     <button type="submit">Log In</button>
                 </form>
+              </div>
                 <hr />
+                <div className="form-container">
                 <h1>Sign up</h1>
                 <form className="signupForm" onSubmit={handleSignupSubmit}>
                     <label>FirstName: </label><input name="firstName" value={signupFormData.firstName} type="text" onChange={handleSignupChange}></input>
@@ -77,7 +80,8 @@ export default function Login() {
                     <label>Password</label><input  name="password" type="text" value={signupFormData.password} onChange={handleSignupChange}></input><br />
                     <button type="submit">Sign Up</button>
                 </form>
-        
+                </div>
+              </div>
             </div>
         </>
     )
